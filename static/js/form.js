@@ -29,15 +29,15 @@ $(document).ready(function () {
                     let td_log = tr.insertCell();
                     let td_action_button = tr.insertCell();
 
-                    let delete_button = document.createElement('button');
+                    let delete_button = document.createElement('a');
                     delete_button.innerHTML = "Deletar"
-                    delete_button.className = ("class", "btn btn-danger")
-                    delete_button.setAttribute("onclick", data.id)
+                    delete_button.className = ("class", "btn")
+                    delete_button.setAttribute("href", "/deletar/" + data.id)
 
-                    let edit_button = document.createElement('button');
+                    let edit_button = document.createElement('a');
                     edit_button.innerHTML = "Editar"
-                    edit_button.className = ("class", "btn btn-warning")
-                    edit_button.setAttribute("onclick", data.id)
+                    edit_button.className = ("class", "btn")
+                    edit_button.setAttribute("href", "/edit/" + data.id)
 
                     td_id.innerText = data.id;
                     td_name.innerText = data.name;
